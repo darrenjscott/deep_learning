@@ -10,6 +10,6 @@ print(model.summary())
 model.compile(optimizer='adam', loss='mse')
 
 ## Need to add some training and test data
-model.fit(X_test, y_test, epochs=20)
+model.fit(X_test, y_test, epochs=20, validation_split=0.2)
 
 print("Final loss value:",model.evaluate(X_train, y_train))
